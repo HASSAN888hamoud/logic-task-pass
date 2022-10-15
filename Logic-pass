@@ -1,0 +1,30 @@
+Question one/
+str = "Engineering"
+print ("Original string: " + str)  
+res_str = str[:2] +  str[3:] 
+print ("String after removal of character: " + res_str)
+
+Question two/
+lower = 800
+upper = 900
+
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+Question three/
+import collections
+str1 = 'thequickbrownfoxjumpsoverthelazydog'
+d = collections.defaultdict(int)
+for c in str1:
+    d[c] += 1
+
+for c in sorted(d, key=d.get, reverse=True):
+  if d[c] > 1:
+      print('%s %d' % (c, d[c]))
